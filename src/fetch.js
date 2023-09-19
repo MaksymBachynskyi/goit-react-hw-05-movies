@@ -13,7 +13,7 @@ export async function getByName(name) {
   const element = await axios.get(
     `3/search/movie?query=${name}&include_adult=false&language=en-US&page=1&api_key=${myKey}`
   );
-  return element;
+  return element.data;
 }
 
 export async function getCast(id) {

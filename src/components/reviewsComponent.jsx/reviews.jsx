@@ -1,15 +1,7 @@
 import { getReviews } from 'fetch';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import styled from 'styled-components';
-const UlStyled = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-const StyledTitle = styled.h2`
-  margin-bottom: 12px;
-`;
+import { StyledTitle, UlStyled } from './reviewsStyled';
 export default function Reviews() {
   const { movieId } = useParams();
   const [reviews, setRewievs] = useState(0);

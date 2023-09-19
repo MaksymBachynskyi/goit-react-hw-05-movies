@@ -1,39 +1,13 @@
 import { Outlet, useLocation, useParams } from 'react-router';
 import { getId } from 'fetch';
-import { Suspense, useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-const MovieStyled = styled.div`
-  display: flex;
-  gap: 15px;
-  margin-bottom: 10px;
-`;
-const WrapperStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 10px;
-`;
-const StyledLink = styled(NavLink)`
-  color: blue;
-
-  &:hover {
-    color: orange;
-  }
-`;
-const StyledButton = styled.button`
-  padding: 0px;
-  width: 100px;
-  background-color: white;
-  border-radius: 10px;
-  color: black;
-  cursor: pointer;
-  margin-bottom: 10px;
-  &:hover {
-    background-color: blue;
-    color: white;
-  }
-`;
+import { Suspense, useEffect, useRef, useState } from 'react';
+import {
+  MovieStyled,
+  WrapperStyled,
+  StyledLink,
+  StyledButton,
+} from './moveDetailsStyled';
 export default function MovieDetails() {
   const defaultImg =
     'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
