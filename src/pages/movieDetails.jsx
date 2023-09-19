@@ -71,6 +71,8 @@ export default function MovieDetails() {
                 ? `https://image.tmdb.org/t/p/w200/${film.poster_path}`
                 : defaultImg
             }
+            width={250}
+            alt="poster"
           />
           <WrapperStyled>
             <h1>{film.title}</h1>
